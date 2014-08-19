@@ -36,7 +36,7 @@ def git_download(url):
             z.extractall()
             print('\n{}\n'.format('\n'.join(z.namelist())))
     except Exception as e:
-        print('git url did not return zip file\nException: ' + str(e))
+        print('git url did not return zip file\n{}: {}'.format(type(e), e))
         
 if __name__=='__main__':
     git_download_from_args(sys.argv[1:])
